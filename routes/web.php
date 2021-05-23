@@ -19,10 +19,8 @@ use App\Http\Controllers\PagesController;
 // });
 
 Route::get('/', [PagesController::class,'index']);
-
-Route::get('/about', function() {
-    return view('pages.about');
-});
+Route::get('/about', [PagesController::class, 'about']);
+Route::get('/services', [PagesController::class, 'services']);
 
 // Route::get('/users/{id}/{name}', function($id, $name) {
 //     return 'This is user '.$name.' with an id of '.$id;
