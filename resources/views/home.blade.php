@@ -9,6 +9,20 @@
 
                 <div class="card-body">
                     <a href="/posts/create" class="btn btn-primary">Create Post</a>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Title</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        {{-- @foreach($posts as $post)
+                        <tr>
+                            <th>{{$post->title}}</th>
+                            <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></th>
+                            <th></th>
+                        </tr>
+                        @endforeach --}}
+                    </table>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
