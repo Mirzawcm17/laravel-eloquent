@@ -6,7 +6,7 @@
     <title>{{config('app.name', 'LSAPP')}}</title>
     </head>
     <body>
-        <h1>About</h1>
-        <p>This is the About meme page</p>
+        <h1>Welcome to Oddworld memes</h1>
+        <p>This is the meme app built on Laravel</p>
     </body>
 </html>
