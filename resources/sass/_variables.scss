@@ -18,6 +18,7 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-
-// Navbar 
-$navbar-default-bg: lime;
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}

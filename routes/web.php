@@ -24,3 +24,10 @@ Route::get('/services', [PagesController::class, 'services']);
 Route::resources([
     'posts' => PostsController::class,
 ]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
