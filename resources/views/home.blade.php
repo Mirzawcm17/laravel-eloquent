@@ -10,11 +10,11 @@
                 <div class="card-body">
                     <a href="/posts/create" class="btn btn-primary">Create Post</a>
                     <table class="table table-striped">
-                        <tr>
+                        {{-- <tr>
                             <th>Title</th>
                             <th></th>
                             <th></th>
-                        </tr>
+                        </tr> --}}
                         {{-- @foreach($posts as $post)
                         <tr>
                             <th>{{$post->title}}</th>
