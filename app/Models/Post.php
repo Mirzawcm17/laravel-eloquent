@@ -16,6 +16,7 @@ class Post extends Model
     public $timestamps = true;
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
+        return $this->hasMany(Post::class);
     }
 }
