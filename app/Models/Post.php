@@ -19,4 +19,10 @@ class Post extends Model
         return $this->belongsTo(User::class);
         return $this->hasMany(Post::class);
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+    }
 }
+

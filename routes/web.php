@@ -20,6 +20,11 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/services', [PagesController::class, 'services']);
 // Route::get('/create', [PagesController::class, 'create']);
 // Route::post('/create', [PagesController::class, 'create']);
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+Route::get('/posts', 'PostsController@index')->name('posts');
+
+Route::post('/comment/store', [App\Http\Controllers\CommentController::class, 'store'])->name('comment.add');
 
 Route::resources([
     'posts' => PostsController::class,
@@ -31,3 +36,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+
+//comment routs
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/post/create', 'PostsController@create')->name('post.create');
+Route::post('/post/store', 'PostsController@store')->name('post.store');
