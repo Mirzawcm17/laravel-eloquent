@@ -18,8 +18,7 @@ use App\Http\Controllers\PostsController;
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/services', [PagesController::class, 'services']);
-// Route::get('/create', [PagesController::class, 'create']);
-// Route::post('/create', [PagesController::class, 'create']);
+// Route::get('/post/{id}', 'PostsController@show')->name('posts.show');
 
 Route::resources([
     'posts' => PostsController::class,

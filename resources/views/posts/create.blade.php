@@ -12,5 +12,6 @@
             {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>
         {{Form::submit('Submit', ['class' =>'btn btn-primary'])}}
+        <a href="/posts" class="btn btn-outline-secondary">Back to posts</a>
     {!! Form::close()!!}
 @endsection
