@@ -114,4 +114,10 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
     }
+
+    // public function __construct()
+    // {
+    //     return $this->middleware('auth');
+    // }
+
 }
