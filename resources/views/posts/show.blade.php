@@ -15,7 +15,7 @@
     @endforeach
 
     <hr>
-
+    @if(!Auth::guest())
     <h4>Add comment</h4>
     <form method="post" action="{{ route('comment.add') }}">
         @csrf
@@ -27,7 +27,7 @@
             <input type="submit" class="btn btn-warning" value="Add Comment" />
         </div>
     </form>
-
+    @endif
     <hr>
     <small>Written on {{$post->created_at}}</small>
     <hr>

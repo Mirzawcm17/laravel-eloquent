@@ -45,4 +45,4 @@ Route::get('/post/create', 'PostsController@create')->name('post.create');
 Route::post('/post/store', 'PostsController@store')->name('post.store');
 
 // Category route
-// Route::resource('category', 'CategoryController');
+// Route::resource('/category', [App\Http\Controllers\CategoryController::class, 'category'])->name('category');
