@@ -18,4 +18,9 @@ class CommentController extends Controller
 
         return back();
     }
+
+        public function comments()
+    {
+        return $this->morphMany('App\Models\Comment', 'commentable');
+    }
 }
