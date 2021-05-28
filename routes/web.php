@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SearchController;
 // use App\Http\Controllers\PostsController@store;
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ Route::get('/services', [PagesController::class, 'services']);
 // Route::get('/create', [PagesController::class, 'create']);
 // Route::post('/create', [PagesController::class, 'create']);
 Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+// Route::get('/search', [SearchController::class, 'index']);
+Route::post('/search', [SearchController::class, 'index'])->name('search.query');
 
 Route::get('/posts', 'PostsController@index')->name('posts');
 
