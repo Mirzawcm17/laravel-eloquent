@@ -23,8 +23,7 @@ Route::get('/services', [PagesController::class, 'services']);
 // Route::post('/create', [PagesController::class, 'create']);
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
-// Route::get('/search', [SearchController::class, 'index']);
-Route::post('/search', [SearchController::class, 'index'])->name('search.query');
+Route::post('/search', [SearchController::class, 'index'])->name('search');
 
 Route::get('/posts', 'PostsController@index')->name('posts');
 

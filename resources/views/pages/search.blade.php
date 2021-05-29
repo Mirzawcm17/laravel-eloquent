@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>sök</h1>
+    <h1>Searched: {{$searchterm}} </h1>
     @if(count($posts) > 0)
         @foreach($posts as $post)
         <div class="card p-3 mt-3 mb-3">
@@ -15,6 +15,6 @@
         @endforeach
         {{ $posts->links("pagination::bootstrap-4") }}
     @else
-        <p>NO meme posts found</p>
+        <p>NO meme posts found with "{{$searchterm}}"</p>
     @endif
 @endsection
