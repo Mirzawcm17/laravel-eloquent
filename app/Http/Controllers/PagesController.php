@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        $title = 'Welcome to Oddworld memes!';
+        $title = 'Welcome to my Laravel application!';
         // return view('pages.index', compact('title'));
         return view('pages.index')->with('title', $title);
     }
@@ -20,7 +20,7 @@ class PagesController extends Controller
     public function services(){
         $data =array(
             'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'Meming']
+            'services' => ['Web Design', 'Programming', 'Having fun while coding']
         );
         return view('pages.services')->with($data);
     }
