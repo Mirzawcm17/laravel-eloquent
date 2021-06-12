@@ -15,6 +15,6 @@
         @endforeach
         {{ $posts->links("pagination::bootstrap-4") }}
     @else
-        <p>NO meme posts found</p>
+        <p>No posts found</p>
     @endif
 @endsection
